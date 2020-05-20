@@ -26,7 +26,8 @@ export default class Inspo extends Component {
       }
     })
       .then(response => {
-        this.setState({ image: response.data.url, imageTitle: response.data.title })
+        const url = response.data.media_type === 'image' ? response.data.url : "https://apod.nasa.gov/apod/image/1305/godafoss1600vetter.jpg"
+        this.setState({ image: url, imageTitle: response.data.title })
       })
       .catch((error) => {
         console.log(error)
@@ -44,6 +45,7 @@ export default class Inspo extends Component {
         const randomQuote = response.data[quoteIdx].content.rendered
         const parsedQuote = parse(randomQuote)[0].props.children
         const quoteDate = response.data[quoteIdx].date.split("T")[0]
+        console.log(quoteDate)
         this.setState({ quote: parsedQuote, loading: false, quoteDate: quoteDate }, () => this.fetchImage())
       })
       .catch((error) => {
