@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.quote-container {
+.container {
   position: relative;
   text-align: center;
 }
@@ -13,13 +13,26 @@
   height: 100vh;
 }
 
-.quote-text {
-  color: white;
-  font-size: 50px;
+.quote-container {
+  background-color: #ffffff5c;
+  border-radius: 10px;
+  width: 600px;
+  min-height: 300px;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.quote-text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .hourglass-icon {
