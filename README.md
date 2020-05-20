@@ -1,4 +1,4 @@
-An inspirational design quote accompanied by one of NASA's image of the days.
+An inspirational design quote accompanied by an image from NASA.
 
 Design quote provided by Quotes on Design api
 
